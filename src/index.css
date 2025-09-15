@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+
+:root {
+    --deep-green: #0F5132;
+    --mid-green: #2E8B57;
+    --beige: #F3EFE6;
+    --brown: #6B4F3A;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #133;
+    background: var(--beige);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    color: var(--deep-green);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero-bg {
+    background: linear-gradient(rgba(15, 81, 50, 0.3), rgba(15, 81, 50, 0.3)), 
+                url('https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1600&h=900&fit=crop') 
+                center/cover;
+}
+
+.parallax-bg {
+    transform: translateY(0);
+    transition: transform 0.1s ease-out;
+}
+
+.glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}

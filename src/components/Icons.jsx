@@ -1,4 +1,3 @@
-// src/components/Icons.jsx
 import React from "react";
 
 const Icons = {

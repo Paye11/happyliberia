@@ -2,7 +2,7 @@
 
 import React from "react";
 import Infocard from "./Infocard";
-import { Phone, Mail, MapPin } from "lucide-react"; // direct import
+import { Phone, Mail, MapPin } from "lucide-react"; 
 import Icons from "../Icons";
 
 const Contactinfo = () => (

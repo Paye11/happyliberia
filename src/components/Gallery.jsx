@@ -1,5 +1,6 @@
 
 
+
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import gallery1 from "../assets/gallery1.jpg";
@@ -11,12 +12,12 @@ import gallery6 from "../assets/gallery6.jpg";
 
 const Gallery = () => {
   const images = [
-    { src: gallery1, alt: "Fresh Hass avocado seedlings nurtured in trays—our first step toward Liberia’s avocado future" },
-    { src: gallery2, alt: "Daily care ensures strong, healthy avocado seedlings ready for transplanting" },
-    { src: gallery3, alt: "Our cooperative members working together to raise the next generation of avocado trees." },
-    { src: gallery4, alt: "Healthy Hass avocado seedling—evidence of growth, patience, and preparation." },
-    { src: gallery5, alt: "Women and youth of HAPPY Liberia Cooperative preparing farmland in unity" },
-    { src: gallery6, alt: "faith-driven farming in action" },
+    { src: gallery1, alt: "Gallery Image 1" },
+    { src: gallery2, alt: "Gallery Image 2" },
+    { src: gallery3, alt: "Gallery Image 3" },
+    { src: gallery4, alt: "Gallery Image 4" },
+    { src: gallery5, alt: "Gallery Image 5" },
+    { src: gallery6, alt: "Gallery Image 6" },
   ];
 
   const [hovered, setHovered] = useState(null);
@@ -26,10 +27,9 @@ const Gallery = () => {
     <section className="py-20 bg-green-50">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
-          Our Operations
+          Gallery
         </h2>
 
-        {/* Desktop interactive gallery */}
         <div className="hidden md:flex gap-4 h-[500px]">
           {images.map((image, i) => (
             <motion.div
@@ -44,16 +44,13 @@ const Gallery = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover"
+                loading="lazy"
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/30 opacity-0 hover:opacity-100 flex items-center justify-center text-center text-white font-semibold text-lg transition">
-                {image.alt}
-              </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Mobile stacked grid */}
         <div className="grid grid-cols-2 gap-4 md:hidden">
           {images.map((image, i) => (
             <div
@@ -64,16 +61,13 @@ const Gallery = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-40 object-cover"
+                loading="lazy"
+                className="w-full h-40 object-cover transition-transform duration-500 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/20 flex items-center justify-center text-white font-medium text-sm opacity-0 hover:opacity-100 transition">
-                {image.alt}
-              </div>
             </div>
           ))}
         </div>
 
-        {/* Modal for both mobile & desktop */}
         <AnimatePresence>
           {selected && (
             <motion.div
@@ -89,6 +83,7 @@ const Gallery = () => {
                 exit={{ scale: 0.8 }}
                 src={selected.src}
                 alt={selected.alt}
+                loading="lazy"
                 className="max-w-full max-h-full rounded-lg object-contain"
               />
             </motion.div>
@@ -100,3 +95,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+

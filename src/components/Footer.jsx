@@ -16,7 +16,6 @@ const Footer = () => {
                         </p>
 
                         <div className="flex space-x-4">
-                            {/* Facebook */}
                             <a
                                 href="https://www.facebook.com/ramsey.willie.2025?mibextid=ZbWKwL"
                                 target="_blank"
@@ -26,7 +25,6 @@ const Footer = () => {
                                 <Facebook className="w-5 h-5" />
                             </a>
 
-                            {/* Instagram */}
                             <a
                                 href="https://www.instagram.com/happy20254341?igsh=MWZzbjZwZnY4cmFzaA=="
                                 target="_blank"

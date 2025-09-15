@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, ArrowUp } from "lucide-react";
 import Icons from "./Icons";
 
-// Floating WhatsApp Button
 const FloatingWhatsApp = () => {
   return (
     <motion.div
@@ -28,7 +27,6 @@ const FloatingWhatsApp = () => {
   );
 };
 
-// Scroll to Top Button
 const ScrollToTop = () => {
   const [showButton, setShowButton] = useState(false);
 

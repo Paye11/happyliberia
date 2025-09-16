@@ -35,7 +35,7 @@ const LandingPage = () => {
 
       <Navbar />
       <Herosection />
-      <Teamsection />
+      {/* <Teamsection /> */}
       <Aboutsection />
       <Plantationsection />
       <Whypartnersection />

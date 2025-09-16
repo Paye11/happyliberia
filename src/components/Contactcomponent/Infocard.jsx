@@ -1,4 +1,5 @@
 
+
 import React from "react";
 import * as LucideIcons from "lucide-react"; 
 
@@ -10,13 +11,19 @@ const Infocard = ({ title, items, customContent }) => (
         {items.map((item, i) => {
           const Icon = LucideIcons[item.icon]; 
           return (
-            <div key={i} className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+            <div 
+              key={i} 
+              className="flex items-start sm:items-center space-x-3"
+            >
+              <div className="w-10 h-10 flex-shrink-0 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
                 {Icon && <Icon size={20} />}
               </div>
-              <div>
+
+              <div className="min-w-0"> 
                 <p className="font-medium">{item.label}</p>
-                <p className="text-gray-600">{item.value}</p>
+                <p className="text-gray-600 break-words break-all text-sm sm:text-base">
+                  {item.value}
+                </p>
               </div>
             </div>
           );
@@ -29,5 +36,3 @@ const Infocard = ({ title, items, customContent }) => (
 );
 
 export default Infocard;
-
-

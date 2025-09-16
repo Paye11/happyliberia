@@ -58,11 +58,11 @@
 
 // export default Plantationsection;
 
-import React,{ forwardRef } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Plantationsec from "./Plantationsec";
 
-const Plantationsection = forwardRef((props, ref) => {
+const Plantationsection = ()=> {
   const sections = [
     {
       title: "🌱 Our Nursery",
@@ -84,8 +84,8 @@ const Plantationsection = forwardRef((props, ref) => {
   ];
 
   return (
-    <div
-    ref={ref}
+    <section
+    id="plantation"
       className="py-20 bg-gradient-to-b from-green-50 via-white to-green-50 relative"
     >
       <div className="max-w-5xl mx-auto px-6">
@@ -112,8 +112,8 @@ const Plantationsection = forwardRef((props, ref) => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
-});
+};
 
 export default Plantationsection;

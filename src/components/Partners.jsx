@@ -22,6 +22,12 @@ const Partners = () => {
       points: [],
       bg: "bg-green-50",
     },
+    {
+      title: "🥑 Avocado Exporters Association of Kenya (AEAK)",
+      desc: "Avocado Exporters Association of Kenya know as AEAK (Avos Kenya)",
+      points: [],
+      bg: "bg-white",
+    },
   ];
 
   return (

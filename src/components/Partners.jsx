@@ -17,7 +17,7 @@ const Partners = () => {
       bg: "bg-white",
     },
     {
-      title: "💼 GEM Business Consult, UK",
+      title: "💼 GEM Business Consult, Denmark",
       desc: "Grant writing support, entrepreneurship development, and management.",
       points: [],
       bg: "bg-green-50",
